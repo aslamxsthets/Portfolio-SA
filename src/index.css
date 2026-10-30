@@ -1,22 +1,563 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Pricedown';
+  src: url('./font/Pricedown-Bl.otf') format('opentype');
+  font-display: swap;
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: 'Manrope', sans-serif;
+  --color-red-50: #f3f7f2;
+  --color-red-100: #e4eee5;
+  --color-red-200: #cbdccb;
+  --color-red-300: #a9c5ac;
+  --color-red-400: #81a887;
+  --color-red-500: #638b6c;
+  --color-red-600: #4f7459;
+  --color-red-700: #3f5e48;
+  --color-red-800: #344b3b;
+  --color-red-900: #2c3e32;
+  --color-red-950: #18271e;
+}
+
+:root {
+  --los-santos-orange: #d97732;
+  --grove-green: #4f6841;
+  --asphalt: #171817;
+  --warm-beige: #f0dfbd;
+  --muted-yellow: #d3ac51;
+  --font-interface: Arial, Helvetica, sans-serif;
+  --font-display: 'Pricedown', 'Diploma', Impact, Haettenschweiler, 'Arial Narrow Bold', 'Arial Narrow', sans-serif;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-interface);
   }
   
   body {
     overflow-x: hidden;
+    background: var(--warm-beige);
   }
 }
 
 .font-heading {
-  font-family: 'Cinzel', Georgia, serif;
+  font-family: var(--font-interface);
+  font-stretch: condensed;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+.gta-interface {
+  font-family: var(--font-interface);
+  font-stretch: condensed;
+}
+
+.gta-display {
+  font-family: 'Pricedown', var(--font-display);
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  line-height: .88;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #11130f;
+  text-shadow:
+    3px 3px 0 #11130f,
+    5px 5px 0 rgba(17, 19, 15, .55);
 }
 
 .font-mono-code {
   font-family: 'JetBrains Mono', monospace;
+}
+
+.gta-script {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.gta-heading {
+  font-family: var(--font-interface);
+  font-stretch: condensed;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  text-shadow:
+    2px 2px 0 #11130f,
+    -1px -1px 0 #11130f;
+}
+
+.gta-section.py-24,
+.gta-section-alt.py-24 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.gta-call-sign {
+  color: #d3ac51;
+  text-shadow: 1px 1px 0 #11130f;
+}
+
+.gta-surface {
+  background: #20231c;
+  color: #f0dfbd;
+}
+
+.gta-section {
+  background:
+    linear-gradient(rgba(24, 27, 21, 0.96), rgba(24, 27, 21, 0.96)),
+    repeating-linear-gradient(0deg, transparent 0 42px, rgba(211, 172, 81, 0.04) 42px 43px);
+  color: #f0dfbd;
+}
+
+.gta-section-alt {
+  background:
+    linear-gradient(rgba(31, 35, 27, 0.97), rgba(31, 35, 27, 0.97)),
+    linear-gradient(120deg, rgba(217, 119, 50, 0.15), transparent 40%);
+  color: #f0dfbd;
+}
+
+.gta-panel {
+  background: rgba(31, 32, 27, 0.96);
+  border: 1px solid rgba(211, 172, 81, 0.55);
+  box-shadow: 0 12px 30px rgba(42, 28, 17, 0.18);
+}
+
+.gta-label {
+  color: var(--muted-yellow);
+  font-family: var(--font-interface);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.film-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.hero-los-santos {
+  background:
+    linear-gradient(180deg, rgba(13, 16, 13, 0.1) 0%, rgba(13, 16, 13, 0.2) 48%, rgba(13, 16, 13, 0.82) 100%),
+    url('/los-santos-hero.jpg') center / cover no-repeat,
+    #252b21;
+}
+
+.hero-los-santos::before {
+  content: 'LOS SANTOS / HERO ARTWORK REQUIRED: public/los-santos-hero.jpg';
+  position: absolute;
+  inset: auto 0 7rem;
+  z-index: 1;
+  text-align: center;
+  color: rgba(240, 223, 189, 0.72);
+  font: 10px 'JetBrains Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hero-mission-panel {
+  padding: 0.8rem 1.25rem 1rem;
+  background: rgba(18, 20, 16, 0.88);
+  border-left: 4px solid var(--muted-yellow);
+  border-right: 1px solid rgba(240, 223, 189, 0.5);
+  box-shadow: 4px 4px 0 rgba(18, 20, 16, 0.7);
+}
+
+.hero-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.7rem;
+  color: #f0dfbd;
+  background: rgba(18, 20, 16, 0.82);
+  border: 1px solid rgba(211, 172, 81, 0.7);
+  font: 700 10px var(--font-interface);
+  letter-spacing: 0.08em;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.hero-social-link:focus-visible {
+  outline: 2px solid var(--muted-yellow);
+  outline-offset: 3px;
+}
+
+.hero-socials {
+  width: min(100%, 34rem);
+}
+
+.gta-navbar {
+  position: relative;
+  border-bottom: 3px solid var(--muted-yellow);
+  box-shadow: 0 5px 0 rgba(17, 19, 15, .55);
+}
+
+.gta-pause-menu {
+  position: static;
+  border-radius: 0;
+  box-shadow: inset 0 -2px 0 rgba(211, 172, 81, .25);
+}
+
+.gta-menu-item {
+  border-radius: 0;
+  font-family: var(--font-interface);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.gta-header-action {
+  border-radius: 0;
+  font-family: var(--font-interface);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.hero-social-link:hover {
+  color: #171817;
+  background: #d3ac51;
+  transform: translateY(-2px);
+}
+
+.gta-car {
+  position: relative;
+  width: min(78vw, 430px);
+  height: 150px;
+  filter: drop-shadow(0 18px 12px rgba(20, 18, 14, 0.35));
+}
+
+.los-santos-skyline {
+  position: absolute;
+  inset: auto 0 17% 0;
+  height: 23%;
+  opacity: 0.8;
+  background:
+    linear-gradient(90deg, transparent 0 4%, #20271f 4% 10%, transparent 10% 12%, #252b21 12% 18%, transparent 18% 21%, #1a211b 21% 30%, transparent 30% 34%, #252b21 34% 41%, transparent 41% 44%, #1c231c 44% 51%, transparent 51% 56%, #252b21 56% 65%, transparent 65% 68%, #1c231c 68% 76%, transparent 76% 80%, #252b21 80% 90%, transparent 90%);
+  clip-path: polygon(0 100%, 0 45%, 5% 45%, 5% 22%, 12% 22%, 12% 51%, 18% 51%, 18% 10%, 25% 10%, 25% 44%, 34% 44%, 34% 30%, 41% 30%, 41% 58%, 48% 58%, 48% 16%, 55% 16%, 55% 45%, 63% 45%, 63% 25%, 72% 25%, 72% 50%, 80% 50%, 80% 12%, 88% 12%, 88% 44%, 100% 44%, 100% 100%);
+}
+
+.gta-palm {
+  position: absolute;
+  bottom: 20%;
+  width: 10px;
+  height: 190px;
+  background: #22291f;
+  transform-origin: bottom;
+}
+
+.gta-palm::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: -48px;
+  width: 110px;
+  height: 46px;
+  background: #263323;
+  clip-path: polygon(50% 50%, 0 5%, 44% 40%, 18% 0, 50% 39%, 83% 0, 57% 47%, 100% 14%, 60% 56%);
+}
+
+.gta-palm-left { left: 8%; transform: rotate(-7deg); }
+.gta-palm-right { right: 9%; height: 230px; transform: rotate(8deg); }
+
+.gta-road {
+  position: absolute;
+  inset: auto -10% 0;
+  height: 25%;
+  background: #191b18;
+  clip-path: polygon(16% 100%, 39% 0, 61% 0, 86% 100%);
+}
+
+.gta-road::after {
+  content: '';
+  position: absolute;
+  inset: 45% 0 auto;
+  height: 5px;
+  background: repeating-linear-gradient(90deg, transparent 0 55px, #d3ac51 55px 85px);
+}
+
+.gta-hud {
+  background: rgba(15, 17, 14, 0.84);
+  border: 2px solid rgba(238, 223, 189, 0.8);
+  box-shadow: 3px 3px 0 rgba(15, 17, 14, 0.8);
+}
+
+.gta-minimap {
+  width: 112px;
+  height: 92px;
+  border-radius: 50%;
+  border: 3px solid #e8dfc7;
+  background:
+    linear-gradient(35deg, transparent 0 35%, #68735a 36% 42%, transparent 43%),
+    linear-gradient(145deg, transparent 0 48%, #cbbf9e 49% 53%, transparent 54%),
+    #4b5e46;
+  position: relative;
+  overflow: hidden;
+}
+
+.gta-minimap::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 53%;
+  top: 43%;
+  background: #f0dfbd;
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 2px #171817;
+}
+
+.gta-car::before {
+  content: '';
+  position: absolute;
+  left: 9%;
+  right: 4%;
+  bottom: 34px;
+  height: 58px;
+  border-radius: 48% 18% 12% 18%;
+  background: linear-gradient(160deg, #5c6e46 0 45%, #272a22 46% 62%, #b8602e 63% 100%);
+  border: 3px solid #161713;
+}
+
+.gta-car::after {
+  content: '';
+  position: absolute;
+  left: 26%;
+  top: 33px;
+  width: 42%;
+  height: 48px;
+  background: linear-gradient(135deg, #2d3029, #9b9b7c);
+  clip-path: polygon(16% 100%, 28% 0, 78% 0, 100% 100%);
+  border: 3px solid #161713;
+}
+
+.gta-car::marker {
+  content: '';
+}
+
+.gta-garage {
+  position: absolute;
+  left: 3%;
+  bottom: 17%;
+  width: 21%;
+  height: 23%;
+  background: #20271f;
+  border: 4px solid #171817;
+  box-shadow: inset 0 20px 0 #34382a;
+}
+
+.gta-garage::before {
+  content: '';
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 0;
+  height: 62%;
+  background: repeating-linear-gradient(90deg, #34382a 0 8px, #1a1d18 8px 13px);
+  border-top: 3px solid #d3ac51;
+}
+
+.gta-pole {
+  position: absolute;
+  bottom: 19%;
+  width: 5px;
+  height: 48%;
+  background: #191b18;
+}
+
+.gta-pole::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: -55px;
+  width: 115px;
+  height: 3px;
+  background: #191b18;
+  box-shadow: 0 15px 0 #191b18;
+}
+
+.gta-pole-left { left: 29%; }
+.gta-pole-right { right: 27%; height: 40%; }
+
+.gta-wheel {
+  position: absolute;
+  z-index: 2;
+  bottom: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #121311;
+  border: 8px solid #3e4038;
+  box-shadow: inset 0 0 0 5px #c79a43;
+}
+
+.gta-wheel-left { left: 18%; }
+.gta-wheel-right { right: 13%; }
+
+.gta-coverflow {
+  position: relative;
+  height: min(78vw, 780px);
+  min-height: 540px;
+  perspective: 1400px;
+}
+
+.gta-coverflow-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.gta-coverflow-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(82vw, 700px);
+  aspect-ratio: 1.414 / 1;
+  padding: 0;
+  border: 1px solid rgba(211, 172, 81, .55);
+  background: #11130f;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .45);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 1200ms cubic-bezier(.22, .61, .36, 1), opacity 1200ms ease, filter 1200ms ease;
+  filter: brightness(.55) saturate(.75);
+}
+
+.gta-coverflow-card[data-position="-2"] {
+ z-index: 1;
+ opacity: .35;
+ transform: translate(-50%, -50%) translateX(-125%) scale(.68);
+}
+
+.gta-coverflow-card[data-position="-1"] {
+ z-index: 2;
+ opacity: .58;
+ pointer-events: auto;
+ transform: translate(-50%, -50%) translateX(-78%) scale(.8);
+}
+
+.gta-coverflow-card[data-position="1"] {
+ z-index: 2;
+ opacity: .58;
+ pointer-events: auto;
+ transform: translate(-50%, -50%) translateX(78%) scale(.8);
+}
+
+.gta-coverflow-card[data-position="2"] {
+ z-index: 1;
+ opacity: .35;
+ transform: translate(-50%, -50%) translateX(125%) scale(.68);
+}
+
+.gta-coverflow-card[aria-current="true"] {
+ z-index: 3;
+ opacity: 1;
+ pointer-events: auto;
+ transform: translate(-50%, -50%) scale(1);
+ filter: none;
+}
+
+.gta-coverflow-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: auto;
+  backface-visibility: hidden;
+}
+
+.gta-coverflow-control {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(211, 172, 81, .7);
+  border-radius: 50%;
+  background: rgba(17, 19, 15, .85);
+  color: #d3ac51;
+  transform: translateY(-50%);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.gta-coverflow-control:hover,
+.gta-coverflow-control:focus-visible {
+  background: #d3ac51;
+  color: #171817;
+}
+
+.gta-coverflow-control-left { left: 2%; }
+.gta-coverflow-control-right { right: 2%; }
+
+.gta-coverflow-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  z-index: 5;
+  display: flex;
+  gap: .45rem;
+  transform: translateX(-50%);
+}
+
+.gta-coverflow-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(240, 223, 189, .35);
+}
+
+.gta-coverflow-dots span.is-active { background: #d3ac51; }
+
+.gta-flip {
+  perspective: 1200px;
+}
+
+.gta-flip-inner {
+  position: relative;
+  min-height: 330px;
+  transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(.2,.7,.2,1);
+}
+
+.gta-flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.gta-flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.gta-flip-back {
+  transform: rotateY(180deg);
+}
+
+.gta-form-field {
+  background: #11130f;
+  border: 1px solid rgba(211, 172, 81, 0.45);
+  color: #f0dfbd;
+}
+
+.gta-form-field::placeholder {
+  color: #a9a185;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gta-flip-inner {
+    transition-duration: 0.01ms;
+  }
 }
 
 /* Custom Scrollbar */
@@ -208,6 +749,56 @@
 
 .animate-drums-beat {
   animation: drums-heartbeat 0.9s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+/* San Andreas portfolio visual system */
+:root { color-scheme: dark; }
+html { scroll-padding-top: 5.5rem; }
+body { background: #171817; color: #f0dfbd; }
+.hero-los-santos {
+  background:
+    linear-gradient(90deg, rgba(16, 18, 15, .78) 0%, rgba(16, 18, 15, .48) 48%, rgba(16, 18, 15, .08) 100%),
+    linear-gradient(0deg, rgba(16, 18, 15, .76), transparent 55%),
+    url('/los-santos-hero.png') center 57% / cover no-repeat,
+    #252b21;
+}
+.hero-los-santos::before { content: none; }
+.gta-hero-content {
+  min-height: calc(100vh - 7rem);
+  margin-top: 1.5rem;
+}
+.gta-section, .gta-section-alt {
+  background-color: #191b17;
+  background-image: linear-gradient(180deg, rgba(25,27,23,.94), rgba(25,27,23,.97)), url('/los-santos-hero.png');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #f0dfbd;
+}
+.gta-section-alt { background-position: center 65%; }
+nav { backdrop-filter: blur(14px); }
+.gta-flip-inner { min-height: 360px; }
+.gta-flip-face { border-radius: 2px; }
+.gta-flip-back a { display: inline-flex; }
+.gta-form-field:focus { outline: 2px solid #d3ac51; outline-offset: 2px; }
+::-webkit-scrollbar-thumb { background: #7a824e; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #d3ac51; }
+
+@media (max-width: 767px) {
+  .hero-los-santos { background-position: 62% center; }
+  .gta-section, .gta-section-alt { background-attachment: scroll; }
+  .gta-flip-inner { min-height: 380px; }
+  .gta-hero-content { min-height: calc(100vh - 5rem); margin-top: 1rem; }
+  .gta-coverflow { height: min(125vw, 650px); min-height: 430px; }
+  .gta-coverflow-card { width: min(94vw, 540px); }
+  .gta-coverflow-card[data-position="-1"],
+  .gta-coverflow-card[data-position="1"] { opacity: .5; }
+  .gta-coverflow-control { width: 34px; height: 34px; }
+  .gta-coverflow-control-left { left: 0; }
+  .gta-coverflow-control-right { right: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
 /* Print styles for Resume */

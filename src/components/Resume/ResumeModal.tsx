@@ -1,8 +1,6 @@
 import React from 'react';
 import { profileData, educationTimeline } from '../../data/profile';
-import { skillsData } from '../../data/skills';
 import { projectsData } from '../../data/projects';
-import { researchData } from '../../data/research';
 import { certificationsData } from '../../data/certifications';
 import { soundEngine } from '../../utils/sound';
 import { 
@@ -36,8 +34,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     soundEngine.playClick();
     const resumeText = `
 ============================================================
-                    ASLAM JAVEED M
-  PRE-FINAL YEAR STUDENT CUM DFIR ENTHUSIAST
+                    ASLAM JAVEED
+  CYBERSECURITY | DIGITAL AND MOBILE FORENSICS | DFIR
 ============================================================
 Email: ${profileData.email}
 Phone: ${profileData.phone}
@@ -51,38 +49,30 @@ ${profileData.summary}
 EDUCATION:
 - Manakula Vinayagar Institute of Technology (2024 - 2028 Expected)
   B.Tech Computer Science and Engineering (IoT & Cybersecurity including Blockchain Technology)
-- Petit Seminaire Higher Secondary School (2021 - 2022)
-  Secondary School Leaving Certificate (SSLC) / Higher Secondary
-- Petit Seminaire Higher Secondary School (2022 - 2024)
-  Higher Secondary Certificate (HSC) Foundation (Biology - Mathematics)
 
 CORE FOCUS AREAS:
 Digital Forensics, Incident Response, Network Security, Evidence Analysis, Threat Investigation, Security Analysis.
 
 PROJECT HIGHLIGHTS:
-- OWASP Juice Shop: Top 10 Security Vulnerabilities
-- End-to-End Secure File Sharing System
-- SOC Log Analysis Using Splunk
-- Shoulder Surfing Protection APK (Mobile Security)
-- Network Traffic Analysis Using Wireshark
-- AI-Powered Forensic Chatbot for Secure UFDR Analysis - Smart India Hackathon - (SIH'25)
-- SPECTRE (MSME Context) & LUMEN Anomaly Detection
-- Patient Case-Taking Software using AIML - Smart India Hackathon (SIH’26)
+- SPECTRE - Stealth Passive Engagement & Cyber Trap Reconnaissance Engine
+- AI-Powered Criminal Network Analysis System and Forensic Lab
+- Modular Machine Learning Framework for Real-Time Network Anomaly Detection
+- SOC Log Analysis using Splunk
+- Network Traffic Analysis using Wireshark
 
-PUBLICATIONS & RESEARCH:
-- FLORATUNE (ICISML 2026)
-- Modular ML Framework for Real-Time Network Anomaly Detection (ICoICI 2025)
-- AR-Based Regional Language Support (MedNext 2025, AICTE-VAANI)
-- Tata's Green Revolution (SDG-15)
-- Smart Health Monitoring System (SindhanAI'25)
-- Mathematics in the Tamil Sangam Period (Krishcon'25)
+ACHIEVEMENTS:
+- SMART INDIA HACKATHON - SIH'25 and SIH'26
+- FLORATUNE - ICISML'26, International Paper Selection and Presented
+- Modular ML Framework - ICoICI'25, International Paper Author and Presenter
+- 2nd Prize in Startup Pitch Idea - MVIT Puducherry
+- CTF participation at SNU, Chennai and SRM, TRP
 
 KEY CERTIFICATIONS:
 - Cisco: Junior Cybersecurity Analyst Career Path
 - Cisco: Introduction to Cybersecurity & Operating Systems Basics
 - Cisco: Python Essentials 1 & Exploring IoT with Packet Tracer
-- Cisco: Network Defense (In Progress)
-- NPTEL: Ethical Hacking (In Progress)
+- Cisco: Network Defense
+- Linux Tutorials & Administration
 ============================================================
 `;
     const blob = new Blob([resumeText], { type: 'text/plain;charset=utf-8' });
@@ -248,30 +238,12 @@ KEY CERTIFICATIONS:
               </div>
               <div>
                 <strong className="block font-mono text-neutral-800 dark:text-neutral-200 mb-1">
-                  PROGRAMMING & SYSTEMS:
+                  PROGRAMMING AND SYSTEMS:
                 </strong>
                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   Python Programming & Scripting, SQL, TensorFlow Fundamentals, Windows/Linux Internal Architectures, Mobile Security.
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* Research & Publications */}
-          <div>
-            <h2 className="text-xs font-mono font-bold tracking-widest text-red-600 dark:text-red-400 uppercase border-b border-neutral-200 dark:border-neutral-800 pb-1 mb-3">
-              RESEARCH ARCHIVES & PRESENTATIONS
-            </h2>
-            <div className="space-y-3">
-              {researchData.slice(0, 5).map((r, i) => (
-                <div key={i}>
-                  <div className="flex items-center justify-between text-xs font-bold text-neutral-900 dark:text-white">
-                    <span>{r.title}</span>
-                    <span className="font-mono text-neutral-500 font-normal">{r.conferenceOrEvent} ({r.year})</span>
-                  </div>
-                  <p className="text-xs text-neutral-600 dark:text-neutral-400">{r.description}</p>
-                </div>
-              ))}
             </div>
           </div>
 

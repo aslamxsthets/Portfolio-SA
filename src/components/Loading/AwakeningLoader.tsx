@@ -84,7 +84,7 @@ export const AwakeningLoader: React.FC<AwakeningLoaderProps> = ({ onLoaded }) =>
               phase >= 2 ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}
           >
-            ASLAM JAVEED M
+            ASLAM JAVEED
           </h1>
           <p
             className={`font-mono text-xs md:text-sm tracking-wider text-red-600 dark:text-red-400 mt-1 transition-all duration-500 delay-100 ${

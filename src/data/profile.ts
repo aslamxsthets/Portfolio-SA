@@ -1,7 +1,7 @@
 import { ProfileData } from '../types';
 
 export const profileData: ProfileData = {
-  name: "ASLAM JAVEED M",
+  name: "ASLAM JAVEED",
   titles: [
     "PRE-FINAL YEAR STUDENT CUM DFIR ENTHUSIAST",
     "CYBERSECURITY ENGINEERING STUDENT",
@@ -44,22 +44,6 @@ export const educationTimeline = [
     specialization: "IoT & Cybersecurity including Blockchain Technology",
     status: "Current (Pre-Final Year)",
     highlights: "Focusing on Digital Forensics, Incident Response, Network Defense, IoT Security & Cryptography."
-  },
-  {
-    period: "2022 — 2024",
-    institution: "Petit Seminaire Higher Secondary School",
-    degree: "Higher Secondary Certificate (HSC) Foundation",
-    specialization: "Biology — Mathematics",
-    status: "Completed",
-    highlights: "Academic groundwork in logic, scientific methods, and quantitative problem solving."
-  },
-  {
-    period: "2021 — 2022",
-    institution: "Petit Seminaire Higher Secondary School",
-    degree: "Secondary School Leaving Certificate (SSLC) / Higher Secondary",
-    specialization: "Academic foundation in science and mathematics",
-    status: "Completed",
-    highlights: "Strong foundational analytical and mathematical training with scientific reasoning."
   }
 ];
 

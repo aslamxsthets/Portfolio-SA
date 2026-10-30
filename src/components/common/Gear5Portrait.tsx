@@ -83,7 +83,7 @@ export const Gear5Portrait: React.FC<Gear5PortraitProps> = ({
                 WARRIOR OF LIBERATION
               </span>
               <h3 className="text-sm font-heading font-black text-white tracking-wide uppercase">
-                ASLAM JAVEED M
+                ASLAM JAVEED
               </h3>
             </div>
             <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-red-600/90 text-white text-[10px] font-mono font-bold">

@@ -9,7 +9,7 @@ export const Events: React.FC = () => {
   const otherEvents = eventsData.filter((e) => !e.isFeatured);
 
   return (
-    <section id="events" className="py-24 px-4 sm:px-6 relative">
+    <section id="events" className="py-12 sm:py-16 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           chapter="CHAPTER 09"

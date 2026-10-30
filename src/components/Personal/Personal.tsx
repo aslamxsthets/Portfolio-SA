@@ -29,7 +29,7 @@ export const Personal: React.FC = () => {
   };
 
   return (
-    <section id="personal" className="py-24 px-4 sm:px-6 relative">
+    <section id="personal" className="py-12 sm:py-16 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           chapter="CHAPTER 11"

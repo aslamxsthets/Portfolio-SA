@@ -120,14 +120,14 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="py-24 px-4 sm:px-6 relative bg-neutral-50/70 dark:bg-neutral-900/30"
+      className="gta-section-alt py-16 sm:py-20 px-4 sm:px-6 relative"
     >
       <div className="max-w-6xl mx-auto">
         <SectionHeading
-          chapter="CHAPTER 12"
+          chapter="CHAPTER 08"
           badge="COMMUNICATION"
-          title="SEND A MESSAGE"
-          subtitle="Direct coordinates for DFIR collaborations, research inquiries, hackathon teams, and security dialogues."
+          title="CONTACT"
+          subtitle="Use the in-game phone to reach out for DFIR collaborations, research inquiries, and security conversations."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12">
@@ -135,20 +135,20 @@ export const Contact: React.FC = () => {
           {/* Contact Details Column */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
 
-            <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-neutral-900 border-2 border-neutral-900 dark:border-neutral-700 shadow-md">
+            <div className="p-6 sm:p-8 rounded-sm bg-[#252820] text-[#f0dfbd] border-2 border-[#d3ac51] shadow-md">
 
               <span className="text-xs font-mono font-bold text-red-600 dark:text-red-400 uppercase tracking-widest block mb-2">
                 ✦ COORDINATES ✦
               </span>
 
-              <h3 className="text-2xl font-heading font-black text-neutral-900 dark:text-white mb-6">
-                GET IN TOUCH
+              <h3 className="text-2xl font-heading font-black text-[#fff1cf] mb-6">
+                IN-GAME PHONE
               </h3>
 
               <div className="space-y-4">
 
                 {/* Email */}
-                <div className="flex items-start justify-between gap-3 p-3 rounded-2xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700">
+                <div className="flex items-start justify-between gap-3 p-3 rounded-sm bg-[#11130f] border border-[#d3ac51]/40">
 
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
@@ -160,7 +160,7 @@ export const Contact: React.FC = () => {
 
                       <a
                         href={`mailto:${profileData.email}`}
-                        className="text-xs sm:text-sm font-mono font-bold text-neutral-900 dark:text-white hover:text-red-600"
+                        className="text-xs sm:text-sm font-mono font-bold text-[#f0dfbd] hover:text-[#d3ac51]"
                       >
                         {profileData.email}
                       </a>
@@ -178,7 +178,7 @@ export const Contact: React.FC = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-start justify-between gap-3 p-3 rounded-2xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700">
+                <div className="flex items-start justify-between gap-3 p-3 rounded-sm bg-[#11130f] border border-[#d3ac51]/40">
 
                   <div className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
@@ -190,7 +190,7 @@ export const Contact: React.FC = () => {
 
                       <a
                         href={`tel:${profileData.phone.replace(/\s+/g, '')}`}
-                        className="text-xs sm:text-sm font-mono font-bold text-neutral-900 dark:text-white hover:text-red-600"
+                        className="text-xs sm:text-sm font-mono font-bold text-[#f0dfbd] hover:text-[#d3ac51]"
                       >
                         {profileData.phone}
                       </a>
@@ -208,7 +208,7 @@ export const Contact: React.FC = () => {
                 </div>
 
                 {/* Location */}
-                <div className="flex items-start gap-3 p-3 rounded-2xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700">
+                <div className="flex items-start gap-3 p-3 rounded-sm bg-[#11130f] border border-[#d3ac51]/40">
 
                   <MapPin className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
 
@@ -217,7 +217,7 @@ export const Contact: React.FC = () => {
                       LOCATION
                     </span>
 
-                    <span className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white">
+                    <span className="text-xs sm:text-sm font-semibold text-[#f0dfbd]">
                       {profileData.location}
                     </span>
                   </div>
@@ -233,7 +233,7 @@ export const Contact: React.FC = () => {
                   href={profileData.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 text-xs font-mono font-bold text-neutral-900 dark:text-white"
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-sm bg-[#11130f] hover:bg-[#30382b] text-xs font-mono font-bold text-[#f0dfbd]"
                 >
                   <Linkedin className="w-4 h-4 text-[#0077b5]" />
                   <span>LINKEDIN</span>
@@ -243,7 +243,7 @@ export const Contact: React.FC = () => {
                   href={profileData.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 text-xs font-mono font-bold text-neutral-900 dark:text-white"
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-sm bg-[#11130f] hover:bg-[#30382b] text-xs font-mono font-bold text-[#f0dfbd]"
                 >
                   <Github className="w-4 h-4" />
                   <span>GITHUB</span>
@@ -270,13 +270,13 @@ export const Contact: React.FC = () => {
 
             <form
               onSubmit={handleSubmit}
-              className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-neutral-900 border-2 border-neutral-900 dark:border-neutral-700 shadow-md flex flex-col justify-between h-full"
+              className="p-6 sm:p-8 rounded-sm bg-[#252820] text-[#f0dfbd] border-2 border-[#d3ac51] shadow-md flex flex-col justify-between h-full"
             >
 
               <div>
 
-                <h3 className="text-xl font-heading font-black text-neutral-900 dark:text-white mb-6">
-                  DISPATCH TRANSMISSION
+                <h3 className="text-xl font-heading font-black text-[#fff1cf] mb-6">
+                  SEND MESSAGE / NEW CALL
                 </h3>
 
                 {/* Error Message */}
@@ -307,7 +307,7 @@ export const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     <div>
-                      <label className="block text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 uppercase mb-1">
+                      <label className="block text-xs font-mono font-bold text-[#d3ac51] uppercase mb-1">
                         YOUR NAME *
                       </label>
 
@@ -322,12 +322,12 @@ export const Contact: React.FC = () => {
                           })
                         }
                         placeholder="e.g. Captain Nemo / Recruiter"
-                        className="w-full px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-900 dark:text-white focus:outline-hidden focus:border-red-600 transition-colors"
+                        className="gta-form-field w-full px-4 py-2.5 rounded-sm text-sm font-mono focus:outline-hidden focus:border-[#d3ac51] transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 uppercase mb-1">
+                      <label className="block text-xs font-mono font-bold text-[#d3ac51] uppercase mb-1">
                         YOUR EMAIL *
                       </label>
 
@@ -342,7 +342,7 @@ export const Contact: React.FC = () => {
                           })
                         }
                         placeholder="e.g. investigator@agency.org"
-                        className="w-full px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-900 dark:text-white focus:outline-hidden focus:border-red-600 transition-colors"
+                        className="gta-form-field w-full px-4 py-2.5 rounded-sm text-sm font-mono focus:outline-hidden focus:border-[#d3ac51] transition-colors"
                       />
                     </div>
 
@@ -351,7 +351,7 @@ export const Contact: React.FC = () => {
                   {/* Subject */}
                   <div>
 
-                    <label className="block text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 uppercase mb-1">
+                    <label className="block text-xs font-mono font-bold text-[#d3ac51] uppercase mb-1">
                       SUBJECT *
                     </label>
 
@@ -366,7 +366,7 @@ export const Contact: React.FC = () => {
                         })
                       }
                       placeholder="e.g. DFIR Collaboration / Research Inquiry / Internship"
-                      className="w-full px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-900 dark:text-white focus:outline-hidden focus:border-red-600 transition-colors"
+                      className="gta-form-field w-full px-4 py-2.5 rounded-sm text-sm font-mono focus:outline-hidden focus:border-[#d3ac51] transition-colors"
                     />
 
                   </div>
@@ -374,7 +374,7 @@ export const Contact: React.FC = () => {
                   {/* Message */}
                   <div>
 
-                    <label className="block text-xs font-mono font-bold text-neutral-700 dark:text-neutral-300 uppercase mb-1">
+                    <label className="block text-xs font-mono font-bold text-[#d3ac51] uppercase mb-1">
                       MESSAGE *
                     </label>
 
@@ -389,7 +389,7 @@ export const Contact: React.FC = () => {
                         })
                       }
                       placeholder="Detail your inquiry, project scope, or forensic investigation topic..."
-                      className="w-full px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-sm font-mono text-neutral-900 dark:text-white focus:outline-hidden focus:border-red-600 transition-colors resize-none"
+                      className="gta-form-field w-full px-4 py-2.5 rounded-sm text-sm font-mono focus:outline-hidden focus:border-[#d3ac51] transition-colors resize-none"
                     />
 
                   </div>

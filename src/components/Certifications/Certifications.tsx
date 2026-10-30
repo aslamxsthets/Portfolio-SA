@@ -13,13 +13,13 @@ export const Certifications: React.FC = () => {
   });
 
   return (
-    <section id="certifications" className="py-24 px-4 sm:px-6 relative bg-neutral-50/60 dark:bg-neutral-900/30">
+    <section id="certifications" className="gta-section-alt py-16 sm:py-20 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
-          chapter="CHAPTER 08"
+          chapter="CHAPTER 07"
           badge="ACCREDITATION"
-          title="CERTIFICATION VAULT"
-          subtitle="A catalog of formal learning pathways completed and actively pursued across Cisco Networking Academy, NPTEL, and academic computational bodies."
+          title="COMPLETED MISSIONS"
+          subtitle="Selected cybersecurity and systems learning completed through Cisco and Linux-focused training."
         />
 
         {/* Filter buttons */}
@@ -34,7 +34,7 @@ export const Certifications: React.FC = () => {
               className={`px-4 py-1.5 rounded-full text-xs font-mono font-bold transition-all duration-200 ${
                 filter === opt
                   ? 'bg-red-600 text-white shadow-sm'
-                  : 'bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 hover:border-red-500'
+                  : 'bg-[#11130f] text-[#f0dfbd] border border-[#d3ac51]/50 hover:border-[#d3ac51]'
               }`}
             >
               {opt} ({opt === 'ALL' ? certificationsData.length : certificationsData.filter(c => c.status === opt).length})
@@ -49,11 +49,11 @@ export const Certifications: React.FC = () => {
             return (
               <div
                 key={cert.id}
-                className="group relative p-5 rounded-2xl bg-white dark:bg-neutral-900 border-2 border-neutral-900 dark:border-neutral-700 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                className="group relative p-5 rounded-sm bg-[#252820] border border-[#d3ac51]/60 shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="text-[10px] font-mono text-neutral-400 uppercase font-semibold">
+                    <span className="text-[10px] font-mono text-[#c8c0a5] uppercase font-semibold">
                       {cert.category}
                     </span>
                     <span
@@ -77,14 +77,14 @@ export const Certifications: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-base sm:text-lg text-neutral-900 dark:text-white group-hover:text-red-600 transition-colors leading-snug">
+                  <h3 className="font-heading font-bold text-base sm:text-lg text-[#fff1cf] group-hover:text-[#d3ac51] transition-colors leading-snug">
                     {cert.title}
                   </h3>
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-xs font-mono text-neutral-600 dark:text-neutral-400">
-                  <span className="font-medium">{cert.issuer}</span>
-                  <Award className="w-4 h-4 text-red-600 shrink-0" />
+                  <span className="font-medium text-[#c8c0a5]">{cert.issuer}</span>
+                  <Award className="w-4 h-4 text-[#d3ac51] shrink-0" />
                 </div>
               </div>
             );

@@ -1,24 +1,17 @@
 import React, { useState } from 'react';
-import { SectionHeading } from '../common/SectionHeading';
 import { projectsData } from '../../data/projects';
 import { ProjectItem } from '../../types';
 import { ProjectModal } from './ProjectModal';
 import { soundEngine } from '../../utils/sound';
 import { 
-  FolderGit2, 
-  ExternalLink, 
-  Layers, 
-  ShieldAlert, 
-  Terminal,
-  Search,
-  CheckCircle2
+  ExternalLink
 } from 'lucide-react';
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>('ALL');
 
-  const categories = ['ALL', 'DFIR & Forensics', 'Network Security', 'Ethical Hacking', 'AI & Systems', 'Mobile'];
+  const categories = ['ALL', 'DFIR & Forensics', 'Network Security', 'AI & Systems'];
 
   const filterMapping = (cat: string, project: ProjectItem) => {
     if (cat === 'ALL') return true;
@@ -28,14 +21,8 @@ export const Projects: React.FC = () => {
     if (cat === 'Network Security') {
       return project.category.toLowerCase().includes('network') || project.title.toLowerCase().includes('wireshark') || project.title.toLowerCase().includes('port');
     }
-    if (cat === 'Ethical Hacking') {
-      return project.category.toLowerCase().includes('ethical') || project.category.toLowerCase().includes('web security') || project.title.toLowerCase().includes('juice') || project.title.toLowerCase().includes('metasploit');
-    }
     if (cat === 'AI & Systems') {
       return project.category.toLowerCase().includes('ai') || project.category.toLowerCase().includes('soc') || project.title.toLowerCase().includes('spectre') || project.title.toLowerCase().includes('lumen');
-    }
-    if (cat === 'Mobile') {
-      return project.category.toLowerCase().includes('mobile') || project.title.toLowerCase().includes('apk');
     }
     return true;
   };
@@ -43,17 +30,17 @@ export const Projects: React.FC = () => {
   const filteredProjects = projectsData.filter((p) => filterMapping(activeFilter, p));
 
   return (
-    <section id="projects" className="py-24 px-4 sm:px-6 relative bg-[#faf9f6]/80 dark:bg-neutral-900/40">
+    <section id="projects" className="gta-section-alt py-16 sm:py-20 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading
-          chapter="CHAPTER 04"
-          badge="SECURITY BUILDS"
-          title="MY CREATIONS"
-          subtitle="A showcase of applied cybersecurity projects, digital forensic workflows, ethical penetration testing labs, and privacy engineering tools."
-        />
+        <div className="mb-8 text-center">
+          <div className="gta-script text-[#4f6841] text-lg mb-1">Mission Select</div>
+          <h3 className="gta-heading text-4xl sm:text-5xl font-black tracking-tight text-[#fff1cf]">
+            PROJECTS
+          </h3>
+        </div>
 
         {/* Filter Navigation */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -72,27 +59,23 @@ export const Projects: React.FC = () => {
           ))}
         </div>
 
-        {/* Projects Manga Panel Grid */}
+        {/* Mission selection grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="project-card group relative rounded-3xl p-6 bg-white dark:bg-neutral-900 border-2 border-neutral-900 dark:border-neutral-700 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between overflow-hidden cursor-pointer"
+              className="project-card group relative rounded-sm p-6 bg-[#252820] text-[#f0dfbd] border-2 border-[#4f6841] dark:border-neutral-700 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between overflow-hidden cursor-pointer"
               onClick={() => {
                 soundEngine.playWhoosh();
                 setSelectedProject(project);
               }}
             >
-              {/* Halftone pattern on hover */}
-              <div className="absolute inset-0 bg-manga-halftone opacity-0 group-hover:opacity-30 transition-opacity duration-300 pointer-events-none" />
-
-              {/* Red Manga Energy accent bar */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-neutral-200 dark:bg-neutral-800 group-hover:bg-red-600 transition-colors" />
+              <div className="absolute top-0 left-0 right-0 h-2 bg-[#4f6841] group-hover:bg-[#d97732] transition-colors" />
 
               <div>
                 {/* Category & Status */}
                 <div className="flex items-center justify-between gap-2 mb-3 pt-1">
-                  <span className="text-[11px] font-mono font-bold text-red-600 dark:text-red-400 uppercase tracking-wider">
+                  <span className="text-[11px] font-mono font-bold text-[#4f6841] uppercase tracking-wider">
                     {project.category.split('/')[0]}
                   </span>
                   <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase ${
@@ -105,18 +88,18 @@ export const Projects: React.FC = () => {
                 </div>
 
                 {/* Project Title */}
-                <h3 className="font-heading font-black text-xl text-neutral-900 dark:text-white group-hover:text-red-600 transition-colors mb-2 leading-snug">
+                <h3 className="gta-heading font-black text-xl text-[#fff1cf] group-hover:text-[#d3ac51] transition-colors mb-2 leading-snug">
                   {project.title}
                 </h3>
 
                 {project.focus && (
-                  <p className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-3 font-semibold">
+                  <p className="text-xs font-mono text-[#c8c0a5] mb-3 font-semibold">
                     ✦ {project.focus}
                   </p>
                 )}
 
                 {/* Description Excerpt */}
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed line-clamp-3 mb-4">
+                <p className="text-xs sm:text-sm text-[#c8c0a5] leading-relaxed line-clamp-3 mb-4">
                   {project.description}
                 </p>
               </div>
@@ -141,7 +124,7 @@ export const Projects: React.FC = () => {
 
                 {/* Action CTA */}
                 <div className="flex items-center justify-between text-xs font-mono font-bold text-neutral-900 dark:text-white group-hover:text-red-600 pt-1">
-                  <span>EXPAND SPECIFICATION</span>
+                  <span>START MISSION</span>
                   <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>

@@ -3,7 +3,6 @@ import { ProjectItem } from '../../types';
 import { soundEngine } from '../../utils/sound';
 import { 
   X, 
-  Github, 
   ExternalLink, 
   Download, 
   ShieldAlert, 
@@ -142,17 +141,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {/* Actions / Links */}
         <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-neutral-200 dark:border-neutral-800">
-          {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-neutral-900 text-xs font-mono font-bold transition-all"
-            >
-              <Github className="w-4 h-4" />
-              <span>GITHUB CODE</span>
-            </a>
-          )}
 
           {project.apkDownload && (
             <a

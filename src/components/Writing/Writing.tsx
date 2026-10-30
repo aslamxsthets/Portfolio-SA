@@ -10,7 +10,7 @@ export const Writing: React.FC = () => {
   const [selectedPiece, setSelectedPiece] = useState<WritingItem | null>(null);
 
   return (
-    <section id="writing" className="py-24 px-4 sm:px-6 relative bg-neutral-50/60 dark:bg-neutral-900/30">
+    <section id="writing" className="py-12 sm:py-16 px-4 sm:px-6 relative bg-neutral-50/60 dark:bg-neutral-900/30">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           chapter="CHAPTER 10"
@@ -20,7 +20,7 @@ export const Writing: React.FC = () => {
         />
 
         {/* Identity banner */}
-        <div className="flex items-center justify-center gap-3 mb-12">
+        <div className="flex items-center justify-center gap-3 mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 shadow-xs">
             <Feather className="w-4 h-4 text-red-600" />
             <span className="font-mono text-xs text-neutral-600 dark:text-neutral-400">Written by</span>

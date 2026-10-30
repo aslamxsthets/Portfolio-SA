@@ -121,7 +121,7 @@ export const AwakeningOverlay: React.FC<AwakeningOverlayProps> = ({ isActive, on
 
         {/* Hero Title and Sound Cadence */}
         <h2 className="text-3xl sm:text-4xl font-heading font-black tracking-wider text-white uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)] mt-2">
-          ASLAM JAVEED M
+          ASLAM JAVEED
         </h2>
         
         <p className="text-sm font-mono text-red-400 font-bold tracking-widest uppercase mt-1">

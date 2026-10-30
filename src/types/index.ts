@@ -22,14 +22,11 @@ export interface ProfileData {
   keyBadges: string[];
 }
 
-export type SkillCategory = 
-  | 'DIGITAL FORENSICS'
-  | 'INCIDENT RESPONSE'
+export type SkillCategory =
+  | 'DIGITAL AND MOBILE FORENSICS'
   | 'NETWORK SECURITY'
   | 'SECURITY TOOLS'
-  | 'PROGRAMMING & TECHNOLOGY'
-  | 'SYSTEMS'
-  | 'SOFT SKILLS';
+  | 'PROGRAMMING AND SYSTEMS';
 
 export interface SkillItem {
   name: string;
@@ -50,7 +47,6 @@ export interface ProjectItem {
   status: 'Completed' | 'In Progress' | 'Lab Environment' | 'Research Prototype';
   isLabEnvironment?: boolean;
   features: string[];
-  githubUrl?: string;
   demoUrl?: string;
   apkDownload?: string;
   eventOrContext?: string;
@@ -97,6 +93,7 @@ export interface ExperienceItem {
   period: string;
   description: string;
   editableNotes: string;
+  certificateUrl?: string;
 }
 
 export interface AchievementItem {
@@ -106,7 +103,6 @@ export interface AchievementItem {
   organization: string;
   category: string;
   badge: string;
-  bountyRating: string;
   description: string;
 }
 

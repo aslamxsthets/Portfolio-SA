@@ -10,7 +10,7 @@ export const Research: React.FC = () => {
   const [selectedResearch, setSelectedResearch] = useState<ResearchItem | null>(null);
 
   return (
-    <section id="research" className="py-24 px-4 sm:px-6 relative">
+    <section id="research" className="py-12 sm:py-16 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           chapter="CHAPTER 05"

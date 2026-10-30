@@ -2,108 +2,52 @@ import { CertificationItem } from '../types';
 
 export const certificationsData: CertificationItem[] = [
   {
-    id: "cisco-os-basics",
-    title: "Operating Systems Basics",
-    issuer: "Cisco Networking Academy",
+    id: "cisco-networking-basics",
+    title: "Networking Basics",
+    issuer: "Cisco",
     status: "COMPLETED",
-    category: "Systems & Architecture"
-  },
-  {
-    id: "cisco-iot-packet-tracer",
-    title: "Exploring IoT with Cisco Packet Tracer",
-    issuer: "Cisco Networking Academy",
-    status: "COMPLETED",
-    category: "IoT & Networking"
-  },
-  {
-    id: "cisco-python-1",
-    title: "Python Essentials 1",
-    issuer: "Cisco / OpenEDG Python Institute",
-    status: "COMPLETED",
-    category: "Programming & Automation"
-  },
-  {
-    id: "cisco-intro-cyber",
-    title: "Introduction to Cybersecurity",
-    issuer: "Cisco Networking Academy",
-    status: "COMPLETED",
-    category: "Cybersecurity Fundamentals"
-  },
-  {
-    id: "cisco-junior-analyst",
-    title: "Junior Cybersecurity Analyst Career Path",
-    issuer: "Cisco Networking Academy",
-    status: "COMPLETED",
-    category: "Security Operations & Analysis"
+    category: "Networking Fundamentals"
   },
   {
     id: "cisco-network-defense",
     title: "Network Defense",
-    issuer: "Cisco Networking Academy",
-    status: "IN PROGRESS",
+    issuer: "Cisco",
+    status: "COMPLETED",
     category: "Network Security"
   },
   {
-    id: "nptel-ethical-hacking",
-    title: "Ethical Hacking",
-    issuer: "NPTEL",
-    status: "IN PROGRESS",
-    category: "Offensive Security & Penetration Testing"
-  },
-  {
-    id: "embedded-systems-course",
-    title: "Embedded Systems",
-    issuer: "Online Certification Course",
+    id: "cisco-junior-cybersecurity-analyst",
+    title: "Junior Cybersecurity Analyst Career Path",
+    issuer: "Cisco",
     status: "COMPLETED",
-    category: "Hardware & IoT"
+    category: "Cybersecurity Operations"
   },
   {
-    id: "intro-to-iot",
-    title: "Introduction to IoT",
-    issuer: "Online Certification Course",
+    id: "cisco-intro-cybersecurity",
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco",
     status: "COMPLETED",
-    category: "IoT & Smart Devices"
+    category: "Cybersecurity Fundamentals"
   },
   {
-    id: "computational-theory-1",
-    title: "Computational Theory: Language Principles & Finite Automata",
-    issuer: "Academic Specialization",
+    id: "cisco-python-essentials-1",
+    title: "Python Essentials 1",
+    issuer: "Cisco",
     status: "COMPLETED",
-    category: "Computer Science Theory"
+    category: "Programming"
   },
   {
-    id: "computational-theory-2",
-    title: "Computational Theory: Turing Machines, Transducers & Complexity Classes",
-    issuer: "Academic Specialization",
+    id: "cisco-os-basics",
+    title: "Operating Systems Basics",
+    issuer: "Cisco",
     status: "COMPLETED",
-    category: "Computer Science Theory"
+    category: "Systems"
   },
   {
-    id: "agile-project-mgmt",
-    title: "Agile Project Management: A Concise Introduction",
-    issuer: "Professional Learning Program",
-    status: "COMPLETED",
-    category: "Methodologies & Management"
-  },
-  {
-    id: "types-of-cybersecurity",
-    title: "Types of Cybersecurity",
-    issuer: "Security Course Provider",
-    status: "COMPLETED",
-    category: "Security Foundations"
-  },
-  {
-    id: "linux-tutorial",
-    title: "Linux Tutorial & Administration",
-    issuer: "Linux Learning Foundation",
+    id: "linux-admin",
+    title: "Linux Tutorials & Administration",
+    issuer: "Linux Tutorials & Administration",
     status: "COMPLETED",
     category: "Operating Systems"
-  },
-  {
-    id: "programming-nn-tensorflow",
-    title: "Programming Neural Networks with TensorFlow",
-    issuer: "AI / Deep Learning Course",
-    status: "COMPLETED",
-    category: "AI & Machine Learning"
   }
 ];
