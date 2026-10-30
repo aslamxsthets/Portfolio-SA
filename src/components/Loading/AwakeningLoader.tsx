@@ -36,6 +36,13 @@ export const AwakeningLoader: React.FC<AwakeningLoaderProps> = ({ onLoaded }) =>
         phase === 4 ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
+      <img
+        src={`${import.meta.env.BASE_URL}Load%20Page.png`}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
       <div className="relative flex flex-col items-center justify-center p-8">
         {/* Expanding Red Energy Ring (Phase 3) */}
         {phase >= 3 && (
@@ -49,7 +56,7 @@ export const AwakeningLoader: React.FC<AwakeningLoaderProps> = ({ onLoaded }) =>
           }`}
         >
           <svg
-            className="w-24 h-24 md:w-32 md:h-32 text-neutral-900 dark:text-neutral-100 transition-transform duration-500"
+            className="w-24 h-24 md:w-32 md:h-32 text-white transition-transform duration-500"
             viewBox="0 0 100 100"
             fill="none"
           >
