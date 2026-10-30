@@ -1,19 +1,19 @@
-# ⚡ Portfolio-Gear5
+# Personal Cybersecurity Portfolio
 
 ### Personal Cybersecurity Portfolio — Built with React, TypeScript & Motion
 
 > A dynamic, interactive portfolio showcasing my journey, projects, research, cybersecurity skills, certifications and technical interests.
 
 🌐 **Live Portfolio:**  
-https://aslamxsthets.github.io/Portfolio-Gear5/
+https://aslamxsthets.github.io/Portfolio-SA/
 
 ---
 
 ## 🏴‍☠️ About the Project
 
-**Portfolio-Gear5** is my personal portfolio website designed to present my technical journey in Cybersecurity Engineering, with a particular interest in **Digital Forensics and Incident Response (DFIR)**.
+This is my personal portfolio website, designed to present my technical journey in Cybersecurity Engineering, with a particular interest in **Digital Forensics and Incident Response (DFIR)**.
 
-The website combines a modern cybersecurity aesthetic with an energetic, animated interface inspired by the visual spirit of **Gear 5** — while using original UI elements and graphics.
+The website combines a clean cybersecurity aesthetic with original UI elements and graphics.
 
 Rather than being a simple static resume, the portfolio is designed as an interactive experience where visitors can explore my:
 
@@ -34,7 +34,7 @@ Rather than being a simple static resume, the portfolio is designed as an intera
 ## ✨ Features
 
 - ⚡ Modern animated user interface
-- 🎨 Gear 5-inspired visual theme
+- 🎨 Cybersecurity-focused visual theme
 - 🌀 Smooth page and section animations
 - 🖱️ Custom interactive cursor
 - 📱 Fully responsive design
