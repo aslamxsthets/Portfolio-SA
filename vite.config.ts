@@ -78,7 +78,7 @@ function aistudioMediaPlugin(): Plugin {
 
 export default defineConfig(() => {
   return {
-    base: '/Portfolio/',
+    base: '/Portfolio-SA/',
 
     plugins: [
       react(),
