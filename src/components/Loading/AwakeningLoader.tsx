@@ -25,11 +25,17 @@ export const AwakeningLoader: React.FC<AwakeningLoaderProps> = ({ onLoaded }) =>
         isFading ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
-      <img
-        src={`${import.meta.env.BASE_URL}Load%20Page.png`}
-        alt="Loading portfolio"
-        className="block h-full w-full object-cover"
-      />
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcSet={`${import.meta.env.BASE_URL}Load%20Page%20Mobile.png`}
+        />
+        <img
+          src={`${import.meta.env.BASE_URL}Load%20Page.png`}
+          alt="Loading portfolio"
+          className="block h-full w-full object-cover"
+        />
+      </picture>
     </div>
   );
 };
