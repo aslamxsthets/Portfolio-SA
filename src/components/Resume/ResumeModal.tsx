@@ -94,8 +94,8 @@ KEY CERTIFICATIONS:
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Toolbar (non-printable) */}
-        <div className="no-print flex items-center justify-between px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900">
-          <div className="flex items-center gap-2">
+        <div className="no-print flex flex-wrap items-center justify-between gap-3 px-4 sm:px-6 py-4 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900">
+          <div className="flex flex-wrap items-center justify-end gap-2">
             <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
             <span className="font-mono text-xs font-bold uppercase tracking-wider text-neutral-800 dark:text-neutral-200">
               CURRICULUM VITAE PREVIEW
@@ -109,7 +109,7 @@ KEY CERTIFICATIONS:
               title="Print to PDF or paper printer"
             >
               <Printer className="w-3.5 h-3.5" />
-              <span>PRINT / SAVE PDF</span>
+              <span className="hidden sm:inline">PRINT / SAVE PDF</span>
             </button>
             <button
               onClick={handleDownloadText}
@@ -117,7 +117,7 @@ KEY CERTIFICATIONS:
               title="Download text resume"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>DOWNLOAD TXT</span>
+              <span className="hidden sm:inline">DOWNLOAD TXT</span>
             </button>
             <button
               onClick={() => {
@@ -133,7 +133,7 @@ KEY CERTIFICATIONS:
         </div>
 
         {/* Printable Resume Document Body */}
-        <div className="p-6 sm:p-10 overflow-y-auto space-y-8 text-neutral-900 dark:text-neutral-100 font-sans text-sm">
+        <div className="p-4 sm:p-10 overflow-y-auto space-y-8 text-neutral-900 dark:text-neutral-100 font-sans text-sm">
           {/* Header */}
           <div className="border-b-2 border-neutral-900 dark:border-neutral-700 pb-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">

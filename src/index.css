@@ -788,13 +788,32 @@ nav { backdrop-filter: blur(14px); }
   .gta-section, .gta-section-alt { background-attachment: scroll; }
   .gta-flip-inner { min-height: 380px; }
   .gta-hero-content { min-height: calc(100vh - 5rem); margin-top: 1rem; }
-  .gta-coverflow { height: min(125vw, 650px); min-height: 430px; }
+  .gta-coverflow { height: min(125vw, 650px); min-height: 390px; }
   .gta-coverflow-card { width: min(94vw, 540px); }
   .gta-coverflow-card[data-position="-1"],
   .gta-coverflow-card[data-position="1"] { opacity: .5; }
   .gta-coverflow-control { width: 34px; height: 34px; }
   .gta-coverflow-control-left { left: 0; }
   .gta-coverflow-control-right { right: 0; }
+}
+@media (max-width: 480px) {
+  html { scroll-padding-top: 4.5rem; }
+  .gta-display {
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 2px 2px 0 #11130f, 3px 3px 0 rgba(17, 19, 15, .55);
+  }
+  .gta-hero-content { min-height: auto; }
+  .gta-call-sign { font-size: .72rem; letter-spacing: .1em; }
+  .gta-coverflow { height: min(112vw, 500px); min-height: 300px; }
+  .gta-coverflow-card { width: min(88vw, 430px); }
+  .gta-coverflow-card[data-position="-2"],
+  .gta-coverflow-card[data-position="2"] { opacity: 0; }
+  .gta-coverflow-card[data-position="-1"] { transform: translate(-50%, -50%) translateX(-58%) scale(.78); }
+  .gta-coverflow-card[data-position="1"] { transform: translate(-50%, -50%) translateX(58%) scale(.78); }
+  .gta-coverflow-control { width: 40px; height: 40px; }
+  .gta-coverflow-control-left { left: -0.35rem; }
+  .gta-coverflow-control-right { right: -0.35rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

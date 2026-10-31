@@ -160,7 +160,7 @@ export const Contact: React.FC = () => {
 
                       <a
                         href={`mailto:${profileData.email}`}
-                        className="text-xs sm:text-sm font-mono font-bold text-[#f0dfbd] hover:text-[#d3ac51]"
+                        className="break-all text-xs sm:text-sm font-mono font-bold text-[#f0dfbd] hover:text-[#d3ac51]"
                       >
                         {profileData.email}
                       </a>

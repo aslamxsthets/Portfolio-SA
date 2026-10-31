@@ -33,7 +33,7 @@ export const Hero: React.FC<HeroProps> = () => {
           <p className="gta-call-sign gta-interface text-sm sm:text-base font-bold tracking-[0.16em] uppercase">
             @CALL SIGN: EREBUS . D . AKUMA
           </p>
-          <p className="text-base sm:text-lg md:text-xl font-mono font-bold text-[#fff1cf] tracking-wide uppercase">
+          <p className="max-w-3xl text-sm sm:text-lg md:text-xl font-mono font-bold text-[#fff1cf] tracking-wide uppercase break-words">
             DIGITAL FORENSICS & INCIDENT RESPONSE | DFIR ENTHUSIAST | "WILL OF D" COMMUNITY FOUNDER
           </p>
           <p className="mx-auto text-center text-sm sm:text-base font-semibold text-[#fff1cf] max-w-2xl">
@@ -45,7 +45,7 @@ export const Hero: React.FC<HeroProps> = () => {
           <button
             id="btn-hero-explore"
             onClick={() => handleScrollTo('contact')}
-            className="flex items-center gap-2 px-6 py-3 rounded-sm bg-[#171817] hover:bg-[#2f3d2c] text-[#fff1cf] font-mono text-xs sm:text-sm font-bold tracking-wider transition-all duration-200 shadow-md hover:scale-105 active:scale-95"
+            className="min-h-11 flex items-center gap-2 px-4 sm:px-6 py-3 rounded-sm bg-[#171817] hover:bg-[#2f3d2c] text-[#fff1cf] font-mono text-xs sm:text-sm font-bold tracking-wider transition-all duration-200 shadow-md hover:scale-105 active:scale-95"
           >
             <Compass className="w-4 h-4 text-red-500" />
             <span>CONTACT ME</span>
@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = () => {
           <button
             id="btn-hero-projects"
             onClick={() => handleScrollTo('projects')}
-            className="flex items-center gap-2 px-6 py-3 rounded-sm bg-[#f0dfbd] hover:bg-white border-2 border-[#171817] text-[#171817] font-mono text-xs sm:text-sm font-bold tracking-wider transition-all duration-200 shadow-sm hover:scale-105 active:scale-95"
+            className="min-h-11 flex items-center gap-2 px-4 sm:px-6 py-3 rounded-sm bg-[#f0dfbd] hover:bg-white border-2 border-[#171817] text-[#171817] font-mono text-xs sm:text-sm font-bold tracking-wider transition-all duration-200 shadow-sm hover:scale-105 active:scale-95"
           >
             <FolderGit2 className="w-4 h-4 text-red-600" />
             <span>VIEW PROJECTS</span>

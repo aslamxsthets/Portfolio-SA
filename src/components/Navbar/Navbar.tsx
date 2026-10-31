@@ -64,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
     <header className="fixed top-0 left-0 right-0 z-40 px-3 sm:px-6 py-3 transition-all duration-300">
       <nav
         aria-label="Main Navigation"
-        className={`gta-navbar w-fit max-w-full mx-auto flex items-center justify-center transition-all duration-300 rounded-sm px-4 sm:px-6 py-2.5 ${
+        className={`gta-navbar w-fit max-w-full mx-auto flex items-center justify-center transition-all duration-300 rounded-sm px-2 sm:px-6 py-2.5 ${
           isScrolled ? 'bg-[#20231c] shadow-md border border-[#d3ac51]/70' : 'bg-[#20231c]/95 border border-[#d3ac51]/50'
         }`}
       >
@@ -94,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
             id="btn-nav-mobile-menu"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
-            className="xl:hidden p-2 rounded-sm bg-[#121411] text-[#f0dfbd] hover:text-[#d3ac51]"
+            className="xl:hidden min-h-11 min-w-11 p-2 rounded-sm bg-[#121411] text-[#f0dfbd] hover:text-[#d3ac51]"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -102,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="xl:hidden fixed inset-x-4 top-16 mt-2 p-5 bg-[#20231c] border-2 border-[#d3ac51] rounded-sm shadow-2xl z-50 animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="xl:hidden fixed inset-x-3 sm:inset-x-4 top-16 mt-2 max-h-[calc(100vh-5rem)] overflow-y-auto p-4 sm:p-5 bg-[#20231c] border-2 border-[#d3ac51] rounded-sm shadow-2xl z-50 animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="flex items-center justify-between pb-3 border-b border-[#d3ac51]/40 mb-3">
             <span className="gta-label text-xs font-bold text-center">PAUSE MENU / DIRECTORY</span>
             <button onClick={() => setMobileMenuOpen(false)} className="p-1 rounded-sm text-[#c8c0a5] hover:text-[#fff1cf]">
@@ -121,7 +121,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
                     e.preventDefault();
                     handleNavClick(item.href);
                   }}
-                  className={`px-3 py-2.5 rounded-sm font-mono text-xs font-bold transition-all ${
+                  className={`min-h-11 px-2 sm:px-3 py-2.5 rounded-sm font-mono text-[11px] sm:text-xs font-bold transition-all ${
                     isActive ? 'bg-[#d3ac51] text-[#171817]' : 'bg-[#121411] text-[#f0dfbd] hover:bg-[#30382b]'
                   }`}
                 >
