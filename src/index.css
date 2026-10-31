@@ -403,6 +403,7 @@
   position: relative;
   height: min(78vw, 780px);
   min-height: 540px;
+  overflow: hidden;
   perspective: 1400px;
 }
 
@@ -798,6 +799,12 @@ nav { backdrop-filter: blur(14px); }
 }
 @media (max-width: 480px) {
   html { scroll-padding-top: 4.5rem; }
+  .hero-socials { gap: .35rem; }
+  .hero-social-link {
+    gap: .3rem;
+    padding: .45rem .5rem;
+    font-size: 9px;
+  }
   .gta-display {
     font-size: clamp(2.35rem, 12vw, 3.25rem);
     -webkit-text-stroke-width: 1px;
