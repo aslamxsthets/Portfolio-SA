@@ -785,6 +785,7 @@ nav { backdrop-filter: blur(14px); }
 ::-webkit-scrollbar-thumb:hover { background: #d3ac51; }
 
 @media (max-width: 767px) {
+  body { padding-bottom: 4.5rem; }
   .hero-los-santos { background-position: 62% center; }
   .gta-section, .gta-section-alt { background-attachment: scroll; }
   .gta-flip-inner { min-height: 380px; }

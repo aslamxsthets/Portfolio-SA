@@ -61,10 +61,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 px-3 sm:px-6 py-3 transition-all duration-300">
+    <header className="fixed inset-x-0 bottom-0 z-40 px-2 sm:px-6 py-2 xl:top-0 xl:bottom-auto xl:py-3 transition-all duration-300">
       <nav
         aria-label="Main Navigation"
-        className={`gta-navbar w-fit max-w-full mx-auto flex items-center justify-center transition-all duration-300 rounded-sm px-2 sm:px-6 py-2.5 ${
+        className={`gta-navbar w-full xl:w-fit max-w-full mx-auto flex items-center justify-center transition-all duration-300 rounded-sm px-2 sm:px-6 py-2.5 ${
           isScrolled ? 'bg-[#20231c] shadow-md border border-[#d3ac51]/70' : 'bg-[#20231c]/95 border border-[#d3ac51]/50'
         }`}
       >
@@ -89,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
           })}
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex w-full items-center justify-center gap-2 sm:gap-3">
           <button
             id="btn-nav-mobile-menu"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -102,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="xl:hidden fixed inset-x-3 sm:inset-x-4 top-16 mt-2 max-h-[calc(100vh-5rem)] overflow-y-auto p-4 sm:p-5 bg-[#20231c] border-2 border-[#d3ac51] rounded-sm shadow-2xl z-50 animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="xl:hidden fixed inset-x-3 sm:inset-x-4 bottom-16 mb-2 max-h-[calc(100vh-6rem)] overflow-y-auto p-4 sm:p-5 bg-[#20231c] border-2 border-[#d3ac51] rounded-sm shadow-2xl z-50 animate-in fade-in slide-in-from-bottom-4 duration-200">
           <div className="flex items-center justify-between pb-3 border-b border-[#d3ac51]/40 mb-3">
             <span className="gta-label text-xs font-bold text-center">PAUSE MENU / DIRECTORY</span>
             <button onClick={() => setMobileMenuOpen(false)} className="p-1 rounded-sm text-[#c8c0a5] hover:text-[#fff1cf]">
