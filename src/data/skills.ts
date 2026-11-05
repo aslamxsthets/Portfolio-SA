@@ -1,7 +1,7 @@
 import { SkillItem, SkillCategory } from '../types';
 
 export const skillCategories: SkillCategory[] = [
-  'DIGITAL AND MOBILE FORENSICS',
+  'DIGITAL FORENSICS',
   'NETWORK SECURITY',
   'SECURITY TOOLS',
   'PROGRAMMING AND SYSTEMS'
@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
 export const skillsData: SkillItem[] = [
   {
     name: 'Digital and Mobile Forensics',
-    category: 'DIGITAL AND MOBILE FORENSICS',
+    category: 'DIGITAL FORENSICS',
     status: 'ACTIVE FOCUS',
     hakiType: 'Flow/Analysis',
     description: 'Investigating digital and mobile evidence, artifacts, and forensic timelines to support security cases.',
@@ -18,7 +18,7 @@ export const skillsData: SkillItem[] = [
   },
   {
     name: 'Autopsy',
-    category: 'DIGITAL AND MOBILE FORENSICS',
+    category: 'DIGITAL FORENSICS',
     status: 'COMFORTABLE',
     hakiType: 'Flow/Analysis',
     description: 'Disk image analysis, keyword search, artifact review, and forensic timeline support.',
@@ -26,7 +26,7 @@ export const skillsData: SkillItem[] = [
   },
   {
     name: 'Evidence Analysis',
-    category: 'DIGITAL AND MOBILE FORENSICS',
+    category: 'DIGITAL FORENSICS',
     status: 'ACTIVE FOCUS',
     hakiType: 'Observation/Detection',
     description: 'Reviewing artifacts and source data to confirm evidence integrity and interpret findings.',
@@ -34,7 +34,7 @@ export const skillsData: SkillItem[] = [
   },
   {
     name: 'Incident Response',
-    category: 'DIGITAL AND MOBILE FORENSICS',
+    category: 'DIGITAL FORENSICS',
     status: 'ACTIVE FOCUS',
     hakiType: 'Armament/Hardening',
     description: 'Triage, containment, and structured investigation of suspicious security events.',
