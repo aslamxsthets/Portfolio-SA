@@ -9,7 +9,7 @@ export const skillCategories: SkillCategory[] = [
 
 export const skillsData: SkillItem[] = [
   {
-    name: 'Digital and Mobile Forensics',
+    name: 'Digital Forensics',
     category: 'DIGITAL FORENSICS',
     status: 'ACTIVE FOCUS',
     hakiType: 'Flow/Analysis',
